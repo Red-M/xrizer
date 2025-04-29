@@ -33,7 +33,7 @@ impl InteractionProfile for Knuckles {
             },
             serial_number: Property::PerHand {
                 left: c"LHR-FFFFFFF1",
-                right: c"LHR-FFFFFFF2",
+                right: c"LHR-FFFFFFF2"
             },
             tracking_system_name: c"lighthouse",
             manufacturer_name: c"Valve",
@@ -139,6 +139,8 @@ impl InteractionProfile for Knuckles {
                 .leftright("input/thumbstick/touch")
                 .into_iter()
                 .chain(stp.leftright("input/trackpad/touch"))
+                .chain(stp.leftright("input/a/touch"))
+                .chain(stp.leftright("input/b/touch"))
                 .collect(),
             index_touch: stp.leftright("input/trigger/touch"),
             index_curl: stp.leftright("input/trigger/value"),
