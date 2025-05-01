@@ -80,7 +80,7 @@ pub struct XrXDevPropertiesMNDX {
     ty: xr::sys::StructureType,
     next: usize,
     name: [i8; 256],
-    serial: [i8; 256],
+    pub serial: [i8; 256],
     can_create_space: xr::sys::Bool32,
 }
 
@@ -97,7 +97,7 @@ impl XrXDevPropertiesMNDX {
         serial.to_string_lossy().to_string()
     }
 
-    
+
     pub fn can_create_space(&self) -> bool {
         self.can_create_space != openxr::sys::FALSE
     }

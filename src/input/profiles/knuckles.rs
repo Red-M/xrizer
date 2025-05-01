@@ -32,8 +32,8 @@ impl InteractionProfile for Knuckles {
                 right: c"valve/index_controllerLHR-FFFFFFF2",
             },
             serial_number: Property::PerHand {
-                left: c"LHR-FFFFFFF1",
-                right: c"LHR-FFFFFFF2"
+                left: c"LHR-D34DB33F",
+                right: c"LHR-B33FD34D"
             },
             tracking_system_name: c"lighthouse",
             manufacturer_name: c"Valve",
